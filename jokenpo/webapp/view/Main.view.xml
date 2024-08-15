@@ -1,7 +1,20 @@
 <mvc:View controllerName="exercicios.fiori.jokenpo.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    <Page id="pageMain" title="{i18n>title}">
+        <content>
+            <VBox renderType="Bare">
+                <HBox renderType="Bare">
+                    <VBox renderType="Bare">
+                        <Label text="Jogador:"/>
+                        <Input editable="false" value="" />
+                    </VBox>
+                    <VBox renderType="Bare">
+                        <Label text="Computador:"/>
+                        <Input editable="false" value="" />
+                    </VBox>
+                </HBox>
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
