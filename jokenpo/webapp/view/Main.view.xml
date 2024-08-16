@@ -1,20 +1,26 @@
-<mvc:View controllerName="exercicios.fiori.jokenpo.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="pageMain" title="{i18n>title}">
-        <content>
-            <VBox renderType="Bare">
-                <HBox renderType="Bare">
-                    <VBox renderType="Bare">
-                        <Label text="Jogador:"/>
-                        <Input editable="false" value="" />
-                    </VBox>
-                    <VBox renderType="Bare">
-                        <Label text="Computador:"/>
-                        <Input editable="false" value="" />
-                    </VBox>
-                </HBox>
-            </VBox>
-        </content>
-    </Page>
-</mvc:View>
+<View controllerName="exercicios.fiori.jokenpo.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page id="pageMain" title="{i18n>title}">
+		<content>
+			<VBox renderType="Bare" alignItems="Center" class="sapUiSmallMargin">
+				<HBox renderType="Bare" wrap="Wrap">
+					<VBox renderType="Bare" class="sapUiSmallMargin">
+						<Label text="Jogador:" />
+						<Input editable="false" value="{modelControl>/playerWins}" />
+					</VBox>
+					<VBox renderType="Bare" class="sapUiSmallMargin">
+						<Label text="Computador:" />
+						<Input editable="false" value="{modelControl>/computerWins}" />
+					</VBox>
+				</HBox>
+				<HBox renderType="Bare" class="sapUiSmallMargin">
+					<Text text="Vamos jogar uma melhor de 3?" />
+				</HBox>
+				<HBox renderType="Bare" class="sapUiSmallMargin">
+					<Button id="btRock" text="Pedra" class="sapUiSmallMargin" width="150px" type="Accept" press="playGameWithRock" />
+					<Button id="btPaper" text="Papel" class="sapUiSmallMargin" width="150px" type="Reject" press="playGameWithPaper" />
+					<Button id="btScissor" text="Tesoura" class="sapUiSmallMargin" width="150px" type="Emphasized" press="playGameWithScissor" />
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</View>
