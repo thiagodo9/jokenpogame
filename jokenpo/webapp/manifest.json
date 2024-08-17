@@ -14,6 +14,19 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.12.4",
       "toolsId": "e095ffda-527b-4b91-88d8-2a5e179c10c8"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "jokenpo-play": {
+          "semanticObject": "jokenpo",
+          "action": "play",
+          "title": "{{flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
     }
   },
   "sap.ui": {
@@ -102,5 +115,9 @@
       "async": true,
       "id": "App"
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "exerciciosfiorijokenpo"
   }
 }
